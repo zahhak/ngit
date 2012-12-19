@@ -124,6 +124,7 @@ namespace Sharpen
 		public void SetRequestProperty (string key, string value)
 		{
 			switch (key.ToLower ()) {
+			case "authorization": request.Headers["Authorization"] = value; break;
 			case "user-agent": request.UserAgent = value; break;
 			case "content-length": request.ContentLength = long.Parse (value); break;
 			case "content-type": request.ContentType = value; break;
